@@ -1,0 +1,13 @@
+---
+# tasks file for kdenlive
+
+- name: Setup RPMFusion repositories
+  import_role:
+    name: jaredhocutt.rpmfusion
+
+- name: Install kdenlive
+  dnf:
+    name: kdenlive
+    state: present
+  become: yes
+
